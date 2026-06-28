@@ -1,0 +1,7 @@
+config.json
+credentials.json
+.spotipy_cache
+cache/
+downloads/
+__pycache__/
+*.pyc

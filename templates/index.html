@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead as Disco × Spotify</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dead as Disco <span class="x">×</span> Spotify</h1>
+    <div id="user" class="user">connecting…</div>
+  </header>
+
+  <div id="banner" class="banner hidden"></div>
+
+  <main>
+    <aside id="sidebar">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search Spotify…" autocomplete="off" />
+      </div>
+      <nav id="playlists">
+        <button class="pl active" data-kind="liked">★ Liked Songs</button>
+        <div id="playlistList"></div>
+      </nav>
+    </aside>
+
+    <section id="content">
+      <h2 id="contentTitle">Liked Songs</h2>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty hidden">Nothing here.</div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

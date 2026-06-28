@@ -1,0 +1,4 @@
+flask>=2.3
+spotipy>=2.24
+librespot==0.0.10
+librosa>=0.10
