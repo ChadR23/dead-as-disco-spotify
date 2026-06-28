@@ -3,7 +3,7 @@
 Browse your Spotify, preview a track, click once, and it's **imported into Dead as
 Disco** as a ready-to-play custom song — with auto-detected BPM.
 
-![What it looks like](screenshot.png)
+![What it looks like](screenshot.jpg)
 
 > **It's all local.** This is a small web app that runs entirely on *your own computer*
 > — the "server" is just `python app.py` on your machine. Your Spotify login and the
@@ -139,5 +139,11 @@ Files that are **never** committed (gitignored, personal): `config.json`,
 - **Imported song crashes the game on load** — confirm it's 44.1kHz:
   `ffprobe "…/ImportedSongs/<song>/Audio.ogg"` (the tool prepares it at 44.1kHz to avoid
   the game's 48kHz crash).
+
+---
+
+## License
+
+[MIT](LICENSE).
 
 [librespot]: https://github.com/librespot-org/librespot
