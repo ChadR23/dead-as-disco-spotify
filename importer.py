@@ -155,8 +155,11 @@ def import_track(meta: dict) -> dict:
             "startSongOffset": 0,
             "endSongOffset": 0,
             "uEAssetName": name,
-            "originalAudioFileHash": _md5(source),
-            "originalAudioFilePath": str(source).replace("\\", "/"),
+            # Point at the song's OWN Audio.ogg so the game's startup validation
+            # (which deletes songs whose original file is missing) can never orphan
+            # it — even if our local cache is moved or cleared.
+            "originalAudioFileHash": _md5(audio_ogg),
+            "originalAudioFilePath": str(audio_ogg).replace("\\", "/"),
         }
         with open(dest_dir / "Meta.json", "w", encoding="utf-8") as f:
             json.dump(meta_json, f, indent=4)
